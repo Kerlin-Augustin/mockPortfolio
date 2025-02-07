@@ -4,11 +4,28 @@ import Projects from "./components/Projects"
 
 function App() {
 
+  const containerStyle: React.CSSProperties = {
+    display: "flex",
+    gap: "20px",
+    justifyContent: "center", 
+  };
+
+  const containerStyle2: React.CSSProperties = {
+    display: "flex",
+    gap: "20px",
+    alignItems: "center", 
+    flexDirection: "column",
+  };
+
   return (
     <>
-    <Contact />
-    <About />
-    <Projects title='GoSavant' />
+      <div style={containerStyle}>
+        <Contact />
+        <About />
+      </div>
+      <div style={containerStyle2}>
+        <Projects title='GoSavant' />
+      </div>
     </>
   )
 }

@@ -4,7 +4,7 @@ function Contact() {
 
   const styles: { [key: string]: CSSProperties } = {
     container: {
-      marginLeft: '15em',
+      marginLeft: '20em',
       
     },
     image: {
