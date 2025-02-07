@@ -2,21 +2,28 @@ import { CSSProperties } from "react"
 
 function Contact() {
 
-  const container: CSSProperties = {
-    marginLeft: '15em',
+  const styles: { [key: string]: CSSProperties } = {
+    container: {
+      marginLeft: '15em',
+      
+    },
+    image: {
+      borderRadius: "10em"
+    } 
     
   }
 
   return (
     <>
-      <div style={container}>
-        <img src="image.png" width={300} />
+      <div style={styles.container}>
+        <img style={styles.image}src="image.png" width={300} />
         <h2>Kerlin Augustin</h2>
         <h3>Contact Info</h3>
-        <p>Enter Email Address</p>
+        <p>kerlin.augustin1@gmail.com</p>
         <h3>Community Building</h3>
-        <p>LinkedIn</p>
-        <p>Twitter</p>
+        <p><a href="https://www.linkedin.com/in/kerlin-augustin/">LinkedIn</a></p>
+        <p><a href="#">Twitter</a></p>
+        <p><a href="twitch.tv/kerlinsamy">Twitch</a></p>
       </div>
     </>
   )

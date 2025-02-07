@@ -8,7 +8,7 @@ function App() {
     <>
     <Contact />
     <About />
-    <Projects />
+    <Projects title='GoSavant' />
     </>
   )
 }
