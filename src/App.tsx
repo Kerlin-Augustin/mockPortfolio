@@ -7,18 +7,21 @@ function App() {
   const containerStyle: React.CSSProperties = {
     display: "flex",
     gap: "20px",
-    justifyContent: "center", 
+    justifyContent: "center",
   };
 
   const containerStyle2: React.CSSProperties = {
-    display: "flex",
+    display: "grid",
     gap: "20px",
-    alignItems: "center", 
+    alignItems: "center",
+    gridTemplateColumns: "repeat(3, 1fr)"
   };
 
   const h2: React.CSSProperties = {
     textAlign: "center"
   }
+
+  const allProjects = [<Projects title='GoSavant' />, <Projects title='Talent Bridge' />, <Projects title="Stelr Games" />]
 
   return (
     <>
@@ -28,9 +31,7 @@ function App() {
       </div>
       <h2 style={h2}>Projects</h2>
       <div style={containerStyle2}>
-        <Projects title='GoSavant' />
-        <Projects title='GoSavant' />
-        <Projects title='GoSavant' />
+       {allProjects}
       </div>
     </>
   )
