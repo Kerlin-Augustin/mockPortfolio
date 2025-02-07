@@ -6,13 +6,23 @@ function Projects({
   title
 }: ProjectsProps) {
 
+  const containerStyle: React.CSSProperties = {
+    display: "flex",
+    gap: "10px",
+    justifyContent: "center", 
+    flexDirection: "column",
+    border: "1px solid black",
+    borderRadius: "5px",
+    flex: "1",
+    background: '#eeeeee',
+  };
+
   return (
     <>
-      <h2>Projects</h2>
-      <div>
-        <h3>{title}</h3>
-        <h4>Description</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ipsa voluptatibus minima amet odit eligendi.</p>
+      <div style={containerStyle}>
+        <h3 style={{margin: 0, marginLeft: '.8em', marginTop: "1em"}}>{title}</h3>
+        <h4 style={{margin: 0, marginLeft: '1em'}}>Description</h4>
+        <p style={{margin: 0, marginLeft: '1em', marginBottom: '1em'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ipsa voluptatibus minima amet odit eligendi.</p>
       </div>
     </>
   )

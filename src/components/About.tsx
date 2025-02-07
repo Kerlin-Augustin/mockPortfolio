@@ -6,7 +6,7 @@ function About() {
     container: {
       border: "1px solid grey",
       borderRadius: "1em",
-      marginRight: '20em',
+      background: '#eeeeee'
     },
     textAlign: {
       marginLeft: "3.2em"
