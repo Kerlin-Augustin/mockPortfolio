@@ -1,12 +1,18 @@
 import { CSSProperties } from "react"
+import { useState } from 'react'
 
 function Contact() {
+
+  const [darkMode, setDarkMode] = useState(false)
+
+  const onClick = () => {
+    setDarkMode(prevMode => !prevMode)
+  } 
 
   const styles: { [key: string]: CSSProperties } = {
     image: {
       borderRadius: "10em"
     } 
-    
   }
 
   return (
@@ -20,6 +26,7 @@ function Contact() {
         <p><a href="https://www.linkedin.com/in/kerlin-augustin/">LinkedIn</a></p>
         <p><a href="#">Twitter</a></p>
         <p><a href="#">Twitch</a></p>
+        <input onClick={onClick} type="button" value={darkMode ? "Light Mode" : "Dark Mode"} />
       </div>
     </>
   )
