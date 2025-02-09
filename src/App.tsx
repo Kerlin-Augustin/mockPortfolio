@@ -31,7 +31,9 @@ function App() {
       </div>
       <h2 style={h2}>Projects</h2>
       <div style={containerStyle2}>
-       {allProjects}
+       {allProjects.map((el, index) => {
+        return <div key={index}>{el}</div> 
+       })}
       </div>
     </>
   )
