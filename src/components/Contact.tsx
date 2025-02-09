@@ -1,13 +1,7 @@
 import { CSSProperties } from "react"
-import { useState } from 'react'
+import DarkMode from "../darkMode/DarkMode"
 
 function Contact() {
-
-  const [darkMode, setDarkMode] = useState(false)
-
-  const onClick = () => {
-    setDarkMode(prevMode => !prevMode)
-  } 
 
   const styles: { [key: string]: CSSProperties } = {
     image: {
@@ -26,7 +20,7 @@ function Contact() {
         <p><a href="https://www.linkedin.com/in/kerlin-augustin/">LinkedIn</a></p>
         <p><a href="#">Twitter</a></p>
         <p><a href="#">Twitch</a></p>
-        <input onClick={onClick} type="button" value={darkMode ? "Light Mode" : "Dark Mode"} />
+        <DarkMode />
       </div>
     </>
   )

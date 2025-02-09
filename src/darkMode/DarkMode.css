@@ -1,5 +1,4 @@
 :root {
-  --background-color: white;
   --font-color: black;
   --link-color: cornflowerblue;
 }
@@ -8,6 +7,11 @@
   --background-color: black;
   --font-color: white;
   --link-color: lightblue;
+  --div-background: grey;
+}
+
+[data-theme="light"] {
+  --div-background: #eee;
 }
 
 body {
@@ -17,6 +21,10 @@ body {
 
 a {
   color: var(--link-color)
+}
+
+.sections {
+  background: var(--div-background);
 }
 
 .toggle-theme-wrapper {
