@@ -36,9 +36,9 @@ function App() {
     textAlign: "center"
   }
 
-  const allProjects = projects.length > 0
-    ? [<Projects title={projects[0].title} content={projects[0].content} />, <Projects title={projects[1].title} content={projects[1].content}/>, <Projects title={projects[2].title} content={projects[2].content}/>]
-    : []
+  const allProjects = projects.map((project, index) => (
+    <Projects key={index} title={project.title} content={project.content} />
+  ))
 
   return (
     <>
@@ -48,9 +48,7 @@ function App() {
       </div>
       <h2 style={h2}>Projects</h2>
       <div style={containerStyle2}>
-        {allProjects.map((el, index) => {
-          return <div key={index}>{el}</div>
-        })}
+        {allProjects}
       </div>
     </>
   )
