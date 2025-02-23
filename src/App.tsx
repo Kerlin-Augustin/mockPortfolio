@@ -1,8 +1,23 @@
 import Contact from "./components/Contact"
 import About from "./components/About"
 import Projects from "./components/Projects"
+import { useEffect, useState } from 'react'
+import axios from "axios"
 
 function App() {
+
+  const [projects, setProjects] = useState<{ title: string, content: string }[]>([])
+
+  const hook = () => {
+    axios
+      .get('http://localhost:3001/projects')
+      .then(response => {
+        let projects = response.data
+        setProjects(projects)
+      })
+  }
+
+  useEffect(hook, [])
 
   const containerStyle: React.CSSProperties = {
     display: "flex",
@@ -21,7 +36,9 @@ function App() {
     textAlign: "center"
   }
 
-  const allProjects = [<Projects title='GoSavant' />, <Projects title='Talent Bridge' />, <Projects title="Stelr Games" />]
+  const allProjects = projects.length > 0
+    ? [<Projects title={projects[0].title} content={projects[0].content} />, <Projects title={projects[1].title} content={projects[1].content}/>, <Projects title={projects[2].title} content={projects[2].content}/>]
+    : []
 
   return (
     <>
@@ -31,9 +48,9 @@ function App() {
       </div>
       <h2 style={h2}>Projects</h2>
       <div style={containerStyle2}>
-       {allProjects.map((el, index) => {
-        return <div key={index}>{el}</div> 
-       })}
+        {allProjects.map((el, index) => {
+          return <div key={index}>{el}</div>
+        })}
       </div>
     </>
   )

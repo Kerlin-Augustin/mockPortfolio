@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "goSavant",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ipsa voluptatibus minima amet odit eligendi.",
+      "important": true
+    },
+    {
+      "id": "2",
+      "title": "Talent Bridge",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ipsa voluptatibus minima amet odit eligendi.",
+      "important": false
+    },
+    {
+      "id": "3",
+      "title": "Stelr Games",
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ipsa voluptatibus minima amet odit eligendi.",
+      "important": true
+    }
+  ]
+}

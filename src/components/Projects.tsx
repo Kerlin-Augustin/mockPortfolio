@@ -1,9 +1,11 @@
 interface ProjectsProps {
   title: string;
+  content: string;
 }
 
 function Projects({
-  title
+  title,
+  content
 }: ProjectsProps) {
 
   const containerStyle: React.CSSProperties = {
@@ -21,7 +23,7 @@ function Projects({
       <div className="sections" style={containerStyle}>
         <h3 style={{margin: 0, marginLeft: '.8em', marginTop: "1em"}}>{title}</h3>
         <h4 style={{margin: 0, marginLeft: '1em'}}>Description</h4>
-        <p style={{margin: 0, marginLeft: '1em', marginBottom: '1em', marginRight: '1em'}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ipsa voluptatibus minima amet odit eligendi.</p>
+        <p style={{margin: 0, marginLeft: '1em', marginBottom: '1em', marginRight: '1em'}}>{content}</p>
       </div>
     </>
   )
